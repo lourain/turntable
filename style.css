@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  width: 100%;
+  height: 100%; }
+
+#turnable.index {
+  width: 100%;
+  height: 34.253333rem;
+  background: url("./images/bg.png") no-repeat center center/cover;
+  position: relative;
+  overflow: hidden; }
+  #turnable.index .rules {
+    position: absolute;
+    top: 0.493333rem;
+    left: 0;
+    width: 1.68rem;
+    height: 0.613333rem;
+    line-height: 0.613333rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    border-radius: 0 0.306667rem 0.306667rem 0;
+    -webkit-border-radius: 0 0.306667rem 0.306667rem 0;
+    color: #fff; }
+  #turnable.index .records {
+    position: absolute;
+    right: 0;
+    top: 4.773333rem;
+    width: 2.373333rem;
+    height: 0.613333rem;
+    line-height: 0.613333rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    border-radius: 0.306667rem 0 0 0.306667rem;
+    -webkit-border-radius: 0.306667rem 0 0 0.306667rem;
+    color: #fff; }
+  #turnable.index .cards {
+    width: 9.2rem;
+    margin: 9.52rem auto 0;
+    height: 3.733333rem;
+    display: flex; }
+    #turnable.index .cards > div {
+      width: 33.33%;
+      height: 100%; }
+      #turnable.index .cards > div .wx, #turnable.index .cards > div .loan, #turnable.index .cards > div .repayment {
+        width: 2.8rem;
+        height: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 0.266667rem;
+        -webkit-border-radius: 0.266667rem;
+        text-align: center;
+        font-size: 0.426667rem;
+        color: #fff;
+        box-shadow: 5px 5px 10px #666;
+        animation: jump infinite 1s; }
+        #turnable.index .cards > div .wx .title, #turnable.index .cards > div .loan .title, #turnable.index .cards > div .repayment .title {
+          height: 0.84rem;
+          line-height: 0.84rem;
+          background-color: #bbb;
+          border-radius: 0.266667rem 0.266667rem 0 0;
+          -webkit-border-radius: 0.266667rem 0.266667rem 0 0; }
+        #turnable.index .cards > div .wx p, #turnable.index .cards > div .loan p, #turnable.index .cards > div .repayment p {
+          color: #808080;
+          font-size: 0.426667rem; }
+          #turnable.index .cards > div .wx p span, #turnable.index .cards > div .loan p span, #turnable.index .cards > div .repayment p span {
+            display: block; }
+          #turnable.index .cards > div .wx p :last-child, #turnable.index .cards > div .loan p :last-child, #turnable.index .cards > div .repayment p :last-child {
+            margin-top: -0.106667rem; }
+      #turnable.index .cards > div .wx-icon {
+        width: 1.2rem;
+        height: 0.973333rem;
+        margin: 0.4rem auto 0;
+        background: url("./images/weixin.png") no-repeat center center/cover; }
+      #turnable.index .cards > div .wx-bg {
+        width: 1.706667rem;
+        height: 0.546667rem;
+        margin: -0.266667rem auto 0;
+        background: url("./images/weixindi.png") no-repeat center center/cover; }
+      #turnable.index .cards > div .loan-icon {
+        width: 1.093333rem;
+        height: 0.693333rem;
+        margin: 0.50667rem auto 0;
+        background: url("./images/jiekuan.png") no-repeat center center/cover; }
+      #turnable.index .cards > div .loan-bg {
+        width: 1.706667rem;
+        height: 0.546667rem;
+        margin: -0.173333rem auto 0.053333rem;
+        background: url("./images/jiekuandi.png") no-repeat center center/cover; }
+      #turnable.index .cards > div .repayment-icon {
+        width: 0.8rem;
+        height: 0.853333rem;
+        margin: 0.4rem auto 0;
+        background: url("./images/naozhong.png") no-repeat center center/cover; }
+      #turnable.index .cards > div .repayment-bg {
+        width: 1.706667rem;
+        height: 0.546667rem;
+        margin: -0.24rem auto 0.04rem;
+        background: url("./images/huankuandi.png") no-repeat center center/cover; }
+  #turnable.index .circle {
+    margin: 1.6rem auto 0;
+    width: 9.12rem;
+    height: 9.12rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-image: url("./images/paomadeng1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    position: relative; }
+    #turnable.index .circle .wheel {
+      width: 9.12rem;
+      height: 9.12rem;
+      background: url("./images/zhuanpan.png") no-repeat 0.54667rem 0.56rem/8.04rem 8.04rem; }
+    #turnable.index .circle .pointer {
+      width: 2.293333rem;
+      height: 2.96rem;
+      background: url("./images/dianwo.png") no-repeat center 80%/1.86667rem 1.86667rem, url("./images/zhuan1.png") no-repeat center center/cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -1.8rem;
+      margin-left: -1.146667rem; }
+  #turnable.index .person {
+    width: 2.04rem;
+    height: 3.386667rem;
+    position: absolute;
+    top: 21.64rem;
+    right: 0.96rem;
+    background: url("./images/ren.png") no-repeat center center/cover; }
+  #turnable.index .redpag {
+    width: 2.786667rem;
+    height: 1.72rem;
+    position: absolute;
+    top: 22.52rem;
+    left: 0.4rem;
+    background: url("./images/hongbaoren.png") no-repeat center center/cover; }
+  #turnable.index .times {
+    width: 100%;
+    margin-top: 3.626667rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.453333rem;
+    font-weight: 500; }
+    #turnable.index .times .num {
+      text-decoration: underline; }
+
+@keyframes jump {
+  0% {
+    transform: none; }
+  20% {
+    transform: scale(1.05); }
+  80% {
+    transform: scale(1.05); }
+  0% {
+    transform: none; } }
+
+/*# sourceMappingURL=style.css.map */

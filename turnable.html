@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>turnable</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="flexible.js"></script>
+</head>
+<body>
+	<div class="index" id="turnable">
+		<a href="#" class="rules">活动规则</a>
+		<a href="#" class="records">朕的中奖纪录</a>
+		<div class="cards">
+			<div>
+				<div class="wx">
+					<div class="title">任务一</div>
+					<div class="content">
+						<div class="wx-icon"></div>
+						<div class="wx-bg"></div>
+						<p>
+							<span>关注并绑定</span>
+							<span>微信公众号</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="loan">
+					<div class="title">任务二</div>
+					<div class="content">
+						<div class="loan-icon"></div>
+						<div class="loan-bg"></div>
+						<p>极速借款</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="repayment">
+					<div class="title">任务三</div>
+					<div class="content">
+						<div class="repayment-icon"></div>
+						<div class="repayment-bg"></div>
+						<p>无逾期还款</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="circle">
+			<div class="wheel"></div>
+			<div class="pointer"></div>
+		</div>
+		<div class="person"></div>
+		<div class="redpag"></div>
+		<div class="times">
+			— 抽奖次数<span class="num"> 1 </span>次 —
+		</div>
+	</div>
+</body>
+<script>
+var flag = true;
+var angle = [1080,1125,1170,1215,1260,1305,1350,1395];//抽奖转的角度
+var index = null;//奖品所对应的索引
+var num = +document.querySelector(".times .num").innerText;//可点击次数
+var data = [
+	{"0":"iphone7"},
+	{"1":"抵扣券2元"},
+	{"2":"小米充电宝"},
+	{"3":"抵扣券10元"},
+	{"4":"ipad"},
+	{"5":"抵扣券5元"},
+	{"6":"京东卡"},
+	{"7":"抵扣券2元"}
+]
+
+var roll = function () {	
+	if(num){
+		num--;
+		document.querySelector(".times .num").innerText = ` ${num} ` ;
+		document.querySelector(".pointer").removeEventListener("click",roll,false);
+		rotate();
+	}else{
+		alert("您已经没有次数了")
+		return false;
+	}
+	
+}
+var rotate = function () {
+	console.log(document.querySelector(".wheel"))
+	index = ~~(Math.random()*7);//奖品所对应的索引
+	document.querySelector(".wheel").style.cssText = "transform:rotate(" + angle[index]+ "deg);transition:all 8s ease";
+	document.querySelector(".wheel").addEventListener("transitionend",reset,false)
+}
+var reset = function () {
+	document.querySelector(".wheel").removeEventListener("transitionend", reset, false);
+	alert(data[index][index])
+	document.querySelector(".wheel").style.cssText = "transform:rotate(" + 0 + "deg);transition:all 0s ease";
+	console.log(document.querySelector(".wheel"))
+	document.querySelector(".pointer").addEventListener("click",roll,false);
+}
+
+//转盘灯光闪烁
+	var blink = function () {
+		flag?document.querySelector(".circle").style.backgroundImage = "url(<?= $this->absBaseUrl;?>/image/turntable/paomadeng1.png)":document.querySelector(".circle").style.backgroundImage = "url(<?= $this->absBaseUrl;?>/image/turntable/paomadeng2.png)";
+		flag = !flag;
+	}
+	setInterval(blink, 500);
+
+//抽奖
+	document.querySelector(".pointer").addEventListener("click",roll,false);
+</script>
+</html>
